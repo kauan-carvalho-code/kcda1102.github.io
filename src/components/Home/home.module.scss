@@ -6,6 +6,11 @@
   margin-left: 0.5rem;
   margin-left: 2rem;
   padding: 16px 30px 16px 30px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 
   svg {
     margin-right: 0.8rem;
