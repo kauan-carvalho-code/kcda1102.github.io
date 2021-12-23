@@ -1,0 +1,88 @@
+@mixin buttonLayout {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font-weight: bold;
+  margin-left: 0.5rem;
+  margin-left: 2rem;
+  padding: 16px 30px 16px 30px;
+
+  svg {
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.container {
+  height: calc(100vh - 5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 2.8rem;
+  background: var(--background-color-one);
+
+  hr {
+    width: 25rem;
+    margin: 1.2rem auto 1.8rem auto;
+    border-color: rgba(150, 150, 150, .1);
+
+    @media (max-width: 720px) {
+      width: 15rem;
+    }
+  }
+
+  .resume {
+    text-align: center;
+    width: 90%;
+  }
+
+  h1 {
+    font: 4.5rem 'IBM Plex Mono', monospace;
+    padding-bottom: 1rem;
+
+    @media (max-width: 720px) {
+      font-size: 40px;
+    }
+
+    span {
+      color: var(--purple-300);
+    }
+  }
+
+  p {
+    font: 1rem 'IBM Plex Mono', monospace;
+    color: var(--text-gray-200);
+
+    span {
+      color: var(--purple-100);
+    }
+  }
+
+  .buttons_container {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 720px) {
+      flex-direction: column;
+
+      a {
+        & + a {
+          margin-top: 1.2rem;
+        }
+      }
+    }
+
+    .project_button {
+      @include buttonLayout();
+      background: var(--purple-300);
+    }
+
+    .github_button {
+      @include buttonLayout();
+      background: var(--gray-900);
+    }
+  }
+}

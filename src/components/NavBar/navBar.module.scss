@@ -1,0 +1,161 @@
+@mixin navLinkBar {
+  content: '';
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  width: 100%;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  background: var(--purple-700);
+}
+
+
+@keyframes navLinkTransition{
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  } to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.container {
+ background: var(--black-900);
+ top: 0;
+ height: 5rem;
+ position: fixed;
+ width:100%
+}
+
+.content {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+  width: 4rem;
+  padding: 2px;
+  border: 2px solid var(--purple-700);
+  border-radius: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-clip: content-box;
+  
+  transition: width .4s;
+
+  @media (max-width: 720px) {
+     width: 3.50rem;
+    }
+  }
+
+  nav {
+  margin-left: 5rem;
+  height: 5rem;
+
+  @media (max-width: 720px) {
+    width: 50vw;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    background: var(--black-900);
+    transform: translateX(100%);
+
+    transition: transform 0.4s;
+
+    &.menuIsOpen {
+      transform: translateX(0%);
+
+      a {
+        animation: navLinkTransition 0.5s ease forwards;
+
+        & + a {
+          animation: navLinkTransition 0.65s ease forwards;
+          
+          & + a {
+            animation: navLinkTransition 0.8s ease forwards;
+
+            & + a {
+              animation: navLinkTransition 0.95s ease forwards;
+
+              & + a {
+                animation: navLinkTransition 1.10s ease forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+     a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      color: var(--text-gray-200);
+      transition: color 0.2s;
+      margin-left: 1.8rem;
+
+      &:hover {
+        font-weight: bold;
+        color: var(--white);
+  
+        &::after {
+          @include navLinkBar();
+        }
+      }
+      
+      &.active {
+        font-weight: bold;
+        color: var(--white);
+        transition: transform 0.3s ease-in;
+      
+        @media(max-width: 720px) {
+          &::after {
+            display: none;
+          }
+        }
+      
+        &::after {
+          @include navLinkBar();
+        }
+      }
+
+      @media (max-width: 720px) {
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        
+        &::after {
+          display: none;
+        }
+      }
+   } 
+  }
+ }
+
+.icons {
+  display: none;
+  @media (max-width: 720px) {
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+ }
+}
+
+
+
+
+
+
