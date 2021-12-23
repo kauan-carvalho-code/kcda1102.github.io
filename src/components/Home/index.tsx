@@ -17,8 +17,20 @@ export function Home() {
       </div>
       <hr />
       <div className={styles.buttons_container}>
-        <a className={styles.project_button}><RiGitRepositoryLine/>Repositório</a>
-        <a href="https://github.com/kcda1102" className={styles.github_button}><AiFillGithub/>Github</a>
+        <a 
+          href="https://github.com/kcda1102/kcda1102.github.io" 
+          className={styles.project_button}
+        >
+          <RiGitRepositoryLine/>
+          Repositório
+        </a>
+        <a 
+          href="https://github.com/kcda1102" 
+          className={styles.github_button}
+        >
+          <AiFillGithub/>
+          Github
+        </a>
       </div>
     </section>
   )
