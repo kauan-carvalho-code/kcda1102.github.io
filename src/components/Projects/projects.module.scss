@@ -1,5 +1,5 @@
 .container {
-  height: calc(100vh - 5rem);
-  width: 100%;
-  border: 1px solid white;
+  background: var(--background-color-two);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-gray-200);
 }
