@@ -3,8 +3,6 @@
   align-items: center;
   color: var(--white);
   font-weight: bold;
-  margin-left: 0.5rem;
-  margin-left: 2rem;
   padding: 16px 30px 16px 30px;
   cursor: pointer;
 
@@ -69,6 +67,7 @@
   .buttons_container {
     display: flex;
     align-items: center;
+    justify-content: center;
 
     @media (max-width: 720px) {
       flex-direction: column;
@@ -87,7 +86,12 @@
 
     .github_button {
       @include buttonLayout();
+      margin-left: 2rem;
       background: var(--gray-900);
+
+      @media (max-width: 720px) {
+        margin-left: 0;
+      }
     }
   }
 }

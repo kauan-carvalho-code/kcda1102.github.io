@@ -13,7 +13,7 @@ export function ActiveLink({title, href, activeClassName}: ActiveLinkProps) {
         activeClass={activeClassName}
         smooth 
         offset={-80} 
-        duration={200} 
+        duration={1000} 
         to={href}
         spy
       >

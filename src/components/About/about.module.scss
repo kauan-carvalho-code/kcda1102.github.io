@@ -1,104 +1,87 @@
-@mixin buttonLayout {
-  display: flex;
-  align-items: center;
-  color: var(--white);
-  font-weight: bold;
-  margin-left: 0.5rem;
-  margin-left: 2rem;
-  padding: 16px 30px 16px 30px;
-  cursor: pointer;
-  border-radius: 0.25rem;
-
-  &:hover {
-    filter: brightness(0.9);
-  }
-
-  svg {
-    margin-right: 0.8rem;
-    width: 40px;
-    height: 40px;
-  }
+.container {
+  background: var(--background-color-two);
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-gray-200);
 }
 
-.container {
-  height: calc(100vh - 5rem);
-  background: var(--background-color-two);
-  padding-top: 6.5rem;
-
+.content {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  padding: 5rem 5rem 5rem 5rem;
+
+  a {
+      color: var(--purple-100);
+
+      &:hover {
+        filter: brightness(0.9);
+      }
+  }
 }
 
 .image_container {
-  display: inline-block;
-  padding-right: 40px;
-
   img {
-    width: 10rem;
-    padding: 4px;
-    border: 2px solid var(--purple-700);
+    width: 11rem;
+    margin-right: 3rem;
     border-radius: 100%;
-    background-position: center center;
-    background-size: cover;
-    background-clip: content-box;
+    border: 2px solid var(--purple-700);
+    padding: 0.25rem;
+
+    @media (max-width: 720px) {
+      display: none;
+    }
   }
 }
 
-.resume_container {
-  display: inline-block;
-  width: 36rem;
+.about_container {
+  width: auto;
+  max-width: 760px;
 
   h2 {
-    font-family: 'IBM Plex Mono', monospace;
-    margin-bottom: 0.70rem;
+    color: var(--white);
+    margin-bottom: 0.8rem;
   }
 
-  .about_container {
-    margin-bottom: 0.70rem;
-
-    p {
-      font-family: 'IBM Plex Mono', monospace;
-      color: var(--text-gray-200);
-      line-height: 24px;
-  
-      a {
-        color: var(--purple-100);
-        cursor: pointer;
-      }
-    }
+  p {
+    margin-bottom: 0.8rem;
+    line-height: 24px;
   }
 
   .contact_container {
-    font-family: 'IBM Plex Mono', monospace;
-    color: var(--text-gray-200);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-    h2 {
+    .download_button {
       color: var(--white);
-    }
-
-    div {
       display: flex;
-      align-items: flex-start;
-      
+      align-items: center;
+      background: var(--purple-700);
+      padding: 1rem 0.6rem 1rem 0.6rem;
+      border-radius: 0.25rem;
+      justify-content: flex-start;
+
+        svg {
+          margin-right: 0.8rem;
+        }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-right: 5rem;
+    li {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+
       a {
-        @include buttonLayout();
-        background: var(--purple-700);
+        display: flex;
+        align-items: center;
       }
 
-      ul {
-        list-style-type: none;
-        margin-right: 4.2rem;
-  
-        li {
-          display: flex;
-          align-items: center;
-          margin-bottom: 1rem;
-  
-          svg {
-            margin-right: 1rem;
-          }
-        }
+      svg {
+        margin-right: 0.8rem;
       }
     }
   }
