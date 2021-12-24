@@ -25,7 +25,8 @@
  top: 0;
  height: 5rem;
  position: fixed;
- width:100%
+ width:100%;
+ z-index: 9999;
 }
 
 .content {
@@ -39,19 +40,7 @@
   justify-content: space-between;
 
   img {
-  width: 4rem;
-  padding: 2px;
-  border: 2px solid var(--purple-700);
-  border-radius: 100%;
-  background-position: center center;
-  background-size: cover;
-  background-clip: content-box;
-  
-  transition: width .4s;
-
-  @media (max-width: 720px) {
-     width: 3.50rem;
-    }
+    width: 4.2rem;
   }
 
   nav {

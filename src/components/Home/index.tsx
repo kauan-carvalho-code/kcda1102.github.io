@@ -8,7 +8,7 @@ export function Home() {
   return (
     <section className={styles.container} id="home">
       <div className={styles.resume}>
-        <h1>Olá, eu sou o <br/><span>Kauan Carvalho</span></h1>
+        <h1>Olá, sou o <br/><span>Kauan Carvalho</span></h1>
         <p>
           Eu sou um desenvolvedor <span>Front End </span>e uso <span>React</span> para 
           desenvolver as minhas páginas.<br />

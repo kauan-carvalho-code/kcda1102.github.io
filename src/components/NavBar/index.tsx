@@ -1,7 +1,7 @@
 // CSS
 import styles from './navBar.module.scss';
 // Images
-import perfil from '../../assets/perfil.svg';
+import logo from '../../assets/logo.svg';
 // Components
 import { ActiveLink } from '../ActiveLink';
 // React-icons
@@ -16,7 +16,7 @@ export function NavBar() {
   return (
     <header className={styles.container}>
       <div className={styles.content}>
-        <img src={perfil} alt="Foto de perfil"/>
+        <img src={logo} alt="Logo da cyberscripdev"/>
         { isOpen ? (
           <AiOutlineClose onClick={() => setIsOpen(!isOpen)} className={styles.icons}/>
         ) : (
