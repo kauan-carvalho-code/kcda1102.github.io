@@ -12,6 +12,7 @@ export function Technologies() {
 		<section className={styles.container} id="technologies">
 			<div className={styles.content}>
 				<h2>Tecnologias</h2>
+				<p>Clique no ícone de uma se quiser saber mais sobre ela</p>
 				<hr />
 				<ul>
 					<TechnologieItem

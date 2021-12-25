@@ -3,3 +3,27 @@
   font-family: 'IBM Plex Mono', monospace;
   color: var(--text-gray-200);
 }
+
+.content {
+  text-align: center;
+  padding: 5rem 4rem 5rem 4rem;
+
+  h2 {
+    color: var(--white);
+  }
+
+  hr {
+    margin: 2rem auto;
+    width: 50%;
+    border-color: rgba(150, 150, 150, 0.1);
+
+    @media (max-width: 720px) {
+      width: 80%;
+    }
+  }
+}
+
+.collapses_container {
+  display: flex;
+  justify-content: space-between;
+}
