@@ -17,20 +17,23 @@ export function Projects() {
           <ProjectCollapse
             imageSrc={rocketShoes}
             imageAlt="RocketShoes"
-            content="Projeto de loja de tênis"
+            content="Uma loja de tênis com um carrinho de compras 100% funcional, foi desenvolvido usando Typescript, React, styled-components e JSON Server."
             href="/"
+            repositoryHref="https://github.com/kcda1102/ignite-criando-hook-de-carrinho-de-compras"
           />
           <ProjectCollapse
             imageSrc={igNews}
             imageAlt="igNews"
             content="Projeto de site de notícias"
             href="/"
+            repositoryHref="https://github.com/kcda1102/ignite-ignews"
           />
           <ProjectCollapse
             imageSrc={dtmoney}
             imageAlt="DTMoney"
             content="Projeto de app de controle de finanças"
             href="/"
+            repositoryHref="https://github.com/kcda1102/ignite-dtmoney"
           />
         </div>
 			</div>
